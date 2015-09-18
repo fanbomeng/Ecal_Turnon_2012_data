@@ -1,0 +1,11 @@
+the part used to read the online data should be run at least in CMSSW_5_3_18,
+use crab3, with Ecal_Turnon_5_3_18_base/EGamma/ECGelec/test/crab3_Laser2012D.py
+after that:
+produce the ele*.root with in the batch submit way, use the batch file:
+L1Studies/EGamma/Macros/Efficiency/ele_batch_sub.sh, this should works in 6_2_0
+then continue use the file
+L1Studies/EGamma/Macros/Efficiency/ele_selectpair_LC.sh to produce the next step file, tree*****.root
+next go to the L1Studies/EGamma/Macros/FitEfficiency/fitEfficiency_LC.C
+to get the final turn on curve, the file can be use are in the eos space, 
+eos/cms/store/user/fmeng/Crab3/selectPair*, with the name like tree*
+
